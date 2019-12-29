@@ -11,7 +11,7 @@ const account = info.adminAccount
 const password = info.adminPassword
 
 mongoose.connect(
-  `mongodb://${account}:${pwd}@127.0.0.1:27017/koaBlog?authSource=admin`
+  `mongodb://${account}:${password}@127.0.0.1:27017/koaBlog?authSource=admin`
 )
 
 const db = mongoose.connection
