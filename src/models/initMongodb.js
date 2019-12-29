@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const Admin = require('./admin')
 
-mongoose.connect('mongodb://localhost/czg666')
+mongoose.connect('mongodb://localhost/koaBlog')
 
 const info = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, '../privateInfo.json')).toString()
