@@ -3,16 +3,13 @@ const fs = require('fs')
 const path = require('path')
 const Admin = require('./admin')
 
+mongoose.connect('mongodb://localhost/koaBlog')
 
 const info = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, '../privateInfo.json')).toString()
 )
 const account = info.adminAccount
 const password = info.adminPassword
-
-mongoose.connect(
-  `mongodb://${account}:${password}@127.0.0.1:27017/koaBlog?authSource=admin`
-)
 
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'mongodb connection error:'))
