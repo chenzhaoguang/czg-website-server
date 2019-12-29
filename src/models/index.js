@@ -7,10 +7,10 @@ const info = JSON.parse(
 )
 
 const account = info.adminAccount
-const pwd = info.adminPassword
+const password = info.adminPassword
 
 mongoose.connect(
-  `mongodb://${account}:${pwd}@106.13.205.18:27017/koaBlog?authSource=admin`
+  `mongodb://${account}:${password}@106.13.205.18:27017/koaBlog`
 )
 
 const db = mongoose.connection
